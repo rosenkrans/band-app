@@ -1,0 +1,42 @@
+<h1>Seed and Feed Marching Abominable</h1>
+
+<h2>Gig List</h2>
+
+<a href="/gigs/new" class="btn btn-primary">Add Gig</a>
+   
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Gig Name</th>  
+      <th scope="col">Gig Date</th>
+      <th scope="col">Type of Performance</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each gigs}}
+
+    <tr>
+        {{!-- <td><a href="/gigs/{{_id}}">{{_id}}</a></td> --}}
+        <td><a href="/gigs/{{gigName}}">{{gigName}}</a></td>
+        <td><p>{{summary}}</p></td>
+        <td><p>{{description}}</p></td>
+        <td><p>{{createdAt}}</p></td>
+        <td><p>{{status}}</p></td>
+        
+    </tr>
+
+    {{/each}}
+
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+

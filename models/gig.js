@@ -18,7 +18,7 @@ const GigSchema = new mongoose.Schema({
     type: String,
     required: true 
   },
-  createdAt: {
+  dateOfGig: {
     type: Date,
     required: true
   },

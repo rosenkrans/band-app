@@ -37,7 +37,7 @@ const gigRouter = express.Router()
 gigRouter.get('/', (req, res) => {
   gigApi.getAllGigs()
     .then((gigs) => {
-      res.render('hanglebars/gigs', {gigs}) //This goes into the handlebars folder and then gigs.hbs. Path then document.
+      res.render('gigs/gigs', {gigs}) //This goes into the gigs folder and then gigs.hbs. Path then document.
     })
     .catch((err) => {
       res.send(err)
