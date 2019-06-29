@@ -1,8 +1,23 @@
+<a href="/gigs">Back to Gigs Page</a>
 <h1>Seed and Feed Marching Abominable</h1>
 
-<h2>Single Gig</h2>
+<a href="/gigs/{{gig._id}}/edit">Edit Gig</a>
 
+<h2>{{gig.gigName}}</h2>
 
+    <h3>Type of Performance</h3>
+    <p>{{gig.typeOfPerformance}}</p>
+
+    <h3>Event Date</h3>
+    <p>{{gig.dateOfGig}}</p>
+
+    <h3>Description</h3>
+    <p>{{gig.gigDescription}}</p>
+
+    
+<form action="/gigs/{{gig._id}}?_method=DELETE" method="post">
+    <button type="submit" class="btn btn-primary">Delete Gig</button>
+</form>
 
 
 

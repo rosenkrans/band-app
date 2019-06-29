@@ -37,10 +37,44 @@ const gigRouter = express.Router()
 gigRouter.get('/', (req, res) => {
   gigApi.getAllGigs()
     .then((gigs) => {
-      res.render('gigs/gigs', {gigs}) //This goes into the gigs folder and then gigs.hbs. Path then document.
+      res.render('gigs/gigs', {gigs}) 
     })
     .catch((err) => {
       res.send(err)
+    })
+})
+
+gigRouter.get('/create', (req, res) => {
+  res.render('gigs/createGigForm') 
+})
+
+gigRouter.post('/', (req, res) => {
+  gigApi.addNewGig(req.body)
+    .then((newGig) => {
+      res.redirect('/gigs')
+    })
+    .catch((err) => {
+      res.send(err)
+    })
+})
+
+gigRouter.get('/:gigId', (req, res) => {
+  gigApi.getGig(req.params.gigId)
+    .then((gig) => {
+      res.render('gigs/gig', {gig})
+    })
+    .catch((err) => {
+      res.send(err)
+    })
+})
+
+gigRouter.delete('/:gigId', (req, res) => {
+  gigApi.deleteGig(req.params.gigId)
+    .then(() => {
+      res.redirect('/gigs')
+    })
+    .catch((err) => {
+      res.send(err) 
     })
 })
 

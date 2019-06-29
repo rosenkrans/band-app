@@ -14,7 +14,7 @@ const GigSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  eventDescription: {
+  gigDescription: {
     type: String,
     required: true 
   },
@@ -22,22 +22,22 @@ const GigSchema = new mongoose.Schema({
     type: Date,
     required: true
   },
-  name: {
-    type: String
-    // required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  phone: {
-    type: String,
-    required: true 
-  },
-  eventName: {
-    type: String,
-    required: true 
-  },
+  // name: {
+  //   type: String
+  //   // required: true
+  // },
+  // email: {
+  //   type: String,
+  //   required: true
+  // },
+  // phone: {
+  //   type: String,
+  //   required: true 
+  // },
+  // eventName: {
+  //   type: String,
+  //   required: true 
+  // },
   typeOfPerformance: {
     type: String,
     required: true 
