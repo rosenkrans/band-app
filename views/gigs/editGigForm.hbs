@@ -1,16 +1,67 @@
-<a href="/band">Back to Main Page</a>
-<form method="POST" action="gigs?_method=PUT">
+<a href="/gigs">Back to Gigs Page</a>
+<form method="POST" action="/gigs/{{gig._id}}?_method=PUT">
+
+<div class="form-group">
+    <label for="gigName" class="gigName">Gig Name</label>
+      <input 
+        type="text" 
+        id="gigName" 
+        {{!-- placeholder="Gig Name"  --}}
+        name="gigName"
+        value="{{gig.gigName}}"
+      />
+  </div>
+
+  <div class="form-group">
+    <label for="dateOfGig">Date of Gig:</label>
+      <input 
+        type="date" 
+        id="dateOfGig"
+        {{!-- placeholder="Date of Gig" --}}
+        name="dateOfGig"
+        value="{{dateOfGig}}"
+      />
+  </div>
+
+  <div class="form-group">
+    <label for="typeOfPerformance">Type of Performance:
+      
+    </label>
+    <select name="typeOfPerformance" data-selected="{{gig.typeOfPerformance}}">
+      <option value="parade">Parade</option>
+      <option value="festival">Festival</option>
+      <option value="wedding">Wedding</option>
+      <option value="bdayParty">Birthday Party</option>
+    </select>
+   
+  </div>
+
+  <div class="form-group">
+    <label for="gigDescription">Gig Description:</label>
+      <input 
+        type="text" 
+        id="gigDescription"
+        {{!-- placeholder="Gig Description"  --}}
+        name="gigDescription"
+        value="{{gig.gigDescription}}"
+      />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
 
   <!--
     Template for creating input form for a string object key called stringMember
     NOTE: for numeric input fields use `type="number"`
   -->
-  <input type="text" value="{{<TODO: model.stringMember>}}" name="<TODO: stringMember (e.g: name)>" />
+  {{!-- <input type="text" value="{{<TODO: model.stringMember>}}" name="<TODO: stringMember (e.g: name)>" />
 
   <!--
     Template for creating input form for a boolean object member
   -->
   <input type="checkbox" name="<TODO: booleanMember (e.g: isActive)>" value="true" {{#if <TODO: model.booleanMember (e.g: account.isActive)}}checked{{/if}} />
 
-  <input type="submit" value="Update Shop" />
+  <input type="submit" value="Update Shop" /> --}}
 </form>

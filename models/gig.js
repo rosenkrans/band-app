@@ -22,6 +22,10 @@ const GigSchema = new mongoose.Schema({
     type: Date,
     required: true
   },
+  typeOfPerformance: {
+    type: String,
+    required: true 
+  }
   // name: {
   //   type: String
   //   // required: true
@@ -38,10 +42,7 @@ const GigSchema = new mongoose.Schema({
   //   type: String,
   //   required: true 
   // },
-  typeOfPerformance: {
-    type: String,
-    required: true 
-  }
+  
   
 })
 

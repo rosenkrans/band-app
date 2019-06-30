@@ -68,6 +68,33 @@ gigRouter.get('/:gigId', (req, res) => {
     })
 })
 
+gigRouter.get('/:gigId/edit', (req, res) => {
+  gigApi.getGig(req.params.gigId)
+    .then((gig) => {
+      let dateOfGig = gig.dateOfGig
+            if (dateOfGig !== null) {
+              dateOfGig = dateOfGig.toISOString().substring(0, 10)
+            }
+      res.render('gigs/editGigForm', {
+        gig: gig,
+        dateOfGig: dateOfGig
+      })
+    })
+    .catch((err) => {
+      res.send(err)
+    })
+})
+
+gigRouter.put('/:gigId', (req, res) => {
+  gigApi.updateGig(req.params.gigId, req.body)
+    .then(() => {
+      res.redirect('/gigs') 
+    })
+    .catch((err) => {
+      res.send(err)
+    })
+})
+
 gigRouter.delete('/:gigId', (req, res) => {
   gigApi.deleteGig(req.params.gigId)
     .then(() => {
