@@ -1,0 +1,36 @@
+<a href="/band">Back to Main Page</a>
+<h1>Seed and Feed Marching Abominable</h1>
+
+<h2>Member List</h2>
+
+<a href="/members/create" class="btn btn-primary">Add Member</a>
+   
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Member Name</th>  
+      <th scope="col">Member Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each members}}
+
+    <tr>      
+        <td><a href="/members/{{_id}}">{{memberName}}</a></td>
+        <td><p>{{memberEmail}}</p></td>
+    </tr>
+
+    {{/each}}
+  </tbody>
+
+</table>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+<a href="/members">Back to Members Page</a>
+
+<form method="POST" action="/members">
+
+  <div class="form-group">
+    <label for="memberName" class="memberName">Member Name</label>
+      <input 
+        type="text" 
+        id="memberName" 
+        {{!-- placeholder="Member Name"  --}}
+        name="memberName"
+      />
+  </div>
+
+  <div class="form-group">
+    <label for="memberEmail">Member Email:</label>
+      <input 
+        type="text" 
+        id="memberEmail"
+        {{!-- placeholder="Member Email"  --}}
+        name="memberEmail"
+      />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+

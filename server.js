@@ -18,7 +18,7 @@ const methodOverride = require('method-override')
  *
  */
 const { gigRouter } = require('./controllers/gig.js')
-
+const { memberRouter } = require('./controllers/member.js')
 
 /* Step 3
  *
@@ -55,14 +55,13 @@ app.use(express.static(__dirname+"/public"))
  */
 app.set('view engine', 'hbs')
 
-
 /* Step 4
  *
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
 app.use('/gigs', gigRouter)
-
+app.use('/members', memberRouter)
 /* Step 5
  *
  * Set the port the server is to run on
