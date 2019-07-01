@@ -71,14 +71,7 @@ memberRouter.get('/:memberId', (req, res) => {
 memberRouter.get('/:memberId/edit', (req, res) => {
   memberApi.getMember(req.params.memberId)
     .then((member) => {
-      let dateOfMember = member.dateOfMember
-            if (dateOfMember !== null) {
-              dateOfMember = dateOfMember.toISOString().substring(0, 10)
-            }
-      res.render('members/editMemberForm', {
-        member: member,
-        dateOfMember: dateOfMember
-      })
+      res.render('members/editMemberForm', {member})
     })
     .catch((err) => {
       res.send(err)

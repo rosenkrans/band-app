@@ -26,23 +26,6 @@ const GigSchema = new mongoose.Schema({
     type: String,
     required: true 
   }
-  // name: {
-  //   type: String
-  //   // required: true
-  // },
-  // email: {
-  //   type: String,
-  //   required: true
-  // },
-  // phone: {
-  //   type: String,
-  //   required: true 
-  // },
-  // eventName: {
-  //   type: String,
-  //   required: true 
-  // },
-  
   
 })
 
