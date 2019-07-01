@@ -25,7 +25,7 @@ const memberApi = require('../models/member.js')
  * TODO: rename this from templateRouter to something that makes sense. (e.g:
  * `shopRouter`)
  */
-const memberRouter = express.Router()
+const memberRouter = express.Router({mergeParams: true})
 
 /* Step 4
  * 

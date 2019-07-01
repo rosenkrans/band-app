@@ -16,6 +16,8 @@ const express = require('express')
  * 
  */
 const bandApi = require('../models/band.js')
+const gigApi = require('../models/gig.js')
+const memberApi = require('../models/member.js')
 
 /* Step 3 
  * 
