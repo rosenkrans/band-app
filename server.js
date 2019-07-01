@@ -19,6 +19,7 @@ const methodOverride = require('method-override')
  */
 const { gigRouter } = require('./controllers/gig.js')
 const { memberRouter } = require('./controllers/member.js')
+const { bandRouter } = require('./controllers/band.js')
 
 /* Step 3
  *
@@ -62,6 +63,8 @@ app.set('view engine', 'hbs')
  */
 app.use('/gigs', gigRouter)
 app.use('/members', memberRouter)
+app.use('/bands', bandRouter)
+
 /* Step 5
  *
  * Set the port the server is to run on

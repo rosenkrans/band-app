@@ -13,10 +13,6 @@ const BandSchema = new mongoose.Schema({
   bandName: {
     type: String,
     required: true
-  },
-  bandEmail: {
-    type: String,
-    required: true
   }
 })
 

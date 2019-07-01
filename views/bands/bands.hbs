@@ -1,0 +1,36 @@
+{{!-- <a href="/bands">Back to Bands Page</a> --}}
+<h1>Seed and Feed Marching Abominable</h1>
+
+<h2>Band List</h2>
+
+<a href="/bands/create" class="btn btn-primary">Add Band</a>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Band Name</th>  
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each bands}}
+
+    <tr>      
+        <td><a href="/bands/{{_id}}">{{bandName}}</a></td>
+        
+    </tr>
+
+    {{/each}}
+  </tbody>
+
+</table>
+
+
+
+
+
+
+
+
+

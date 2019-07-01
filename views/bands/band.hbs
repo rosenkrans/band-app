@@ -1,0 +1,23 @@
+<a href="/bands">Back to Bands Page</a>
+<h1>Seed and Feed Marching Abominable</h1>
+
+<a href="/bands/{{band._id}}/edit">Edit Band</a>
+
+<h2>Band Name</h2>
+<p>{{band.bandName}}</p>
+    
+
+{{!-- <a href="/gigs" class="btn btn-primary">Band Gigs</a> --}}
+
+
+<form action="/bands/{{band._id}}?_method=DELETE" method="post">
+    <button type="submit" class="btn btn-primary">Delete Band</button>
+</form>
+
+
+
+
+
+
+
+

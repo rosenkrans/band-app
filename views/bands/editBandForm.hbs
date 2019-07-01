@@ -1,0 +1,17 @@
+<a href="/bands">Back to Bands Page</a>
+<form method="POST" action="/bands/{{band._id}}?_method=PUT">
+
+  <div class="form-group">
+    <label for="bandName" class="bandName">Band Name</label>
+      <input 
+        type="text" 
+        id="bandName" 
+        {{!-- placeholder="Band Name"  --}}
+        name="bandName"
+        value="{{band.bandName}}"
+      />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
