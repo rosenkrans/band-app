@@ -112,7 +112,7 @@ gigRouter.put('/:gigId', (req, res) => {
 gigRouter.delete('/:gigId', (req, res) => {
   gigApi.deleteGig(req.params.gigId)
     .then(() => {
-      res.redirect('/gigs')
+      res.redirect(`/bands/${req.params.bandId}/gigs`)
     })
     .catch((err) => {
       res.send(err) 
