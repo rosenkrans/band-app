@@ -88,6 +88,7 @@ gigRouter.get('/:gigId/edit', (req, res) => {
               dateOfGig = dateOfGig.toISOString().substring(0, 10)
             }
       res.render('gigs/editGigForm', {
+        bandId: req.params.bandId,
         gig: gig,
         dateOfGig: dateOfGig
       })
@@ -98,9 +99,10 @@ gigRouter.get('/:gigId/edit', (req, res) => {
 })
 
 gigRouter.put('/:gigId', (req, res) => {
+  console.log('im putting')
   gigApi.updateGig(req.params.gigId, req.body)
     .then(() => {
-      res.redirect('/bands/gigs') 
+      res.redirect(`/bands/${req.params.bandId}/gigs`) 
     })
     .catch((err) => {
       res.send(err)

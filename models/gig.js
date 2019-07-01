@@ -60,7 +60,6 @@ function getGigsByBandId(bandId) {
 }
 
 function updateGig(gigId, updatedGig) {
-  updateGig.bandId = bandId
   return GigCollection.findByIdAndUpdate(gigId, updatedGig)
 }
 
