@@ -35,9 +35,9 @@ const gigRouter = express.Router({mergeParams: true})
 /* Step 5
  */ 
 gigRouter.get('/', (req, res) => {
-  gigApi.getAllGigs()
+  gigApi.getGigsByBandId(req.params.bandId)
     .then((gigs) => {
-      res.render('gigs/gigs', {gigs}) 
+      res.render('gigs/gigs', {bandId: req.params.bandId, gigs: gigs}) 
     })
     .catch((err) => {
       res.send(err)
@@ -45,23 +45,35 @@ gigRouter.get('/', (req, res) => {
 })
 
 gigRouter.get('/create', (req, res) => {
-  res.render('gigs/createGigForm') 
+  res.render('gigs/createGigForm', {bandId: req.params.bandId}) 
 })
 
+// edited 
 gigRouter.post('/', (req, res) => {
-  gigApi.addNewGig(req.body)
+  // console.log(req.params.bandId, req.body)  
+  gigApi.addNewGig(req.params.bandId, req.body)
     .then((newGig) => {
-      res.redirect('/gigs')
+      res.redirect(`/bands/${req.params.bandId}/gigs`)
     })
     .catch((err) => {
       res.send(err)
     })
 })
 
+// gigRouter.post('/', (req, res) => {
+//   gigApi.addNewGig(req.body)
+//     .then((newGig) => {
+//       res.redirect('/gigs')
+//     })
+//     .catch((err) => {
+//       res.send(err)
+//     })
+// })
+
 gigRouter.get('/:gigId', (req, res) => {
   gigApi.getGig(req.params.gigId)
     .then((gig) => {
-      res.render('gigs/gig', {gig})
+      res.render('gigs/gig', {bandId: req.params.bandId, gig: gig})
     })
     .catch((err) => {
       res.send(err)
@@ -88,7 +100,7 @@ gigRouter.get('/:gigId/edit', (req, res) => {
 gigRouter.put('/:gigId', (req, res) => {
   gigApi.updateGig(req.params.gigId, req.body)
     .then(() => {
-      res.redirect('/gigs') 
+      res.redirect('/bands/gigs') 
     })
     .catch((err) => {
       res.send(err)

@@ -7,24 +7,25 @@ const mongoose = require('./connection.js')
  *
  */
 const GigSchema = new mongoose.Schema({
-  id: {
-    type: Number
+  bandId: {
+    type: mongoose.Types.ObjectId,
+    required: true
   },
   gigName: {
     type: String,
-    required: true
+    // required: true
   },
   gigDescription: {
     type: String,
-    required: true 
+    // required: true 
   },
   dateOfGig: {
     type: Date,
-    required: true
+    // required: true
   },
   typeOfPerformance: {
     type: String,
-    required: true 
+    // required: true 
   }
   
 })
@@ -44,7 +45,9 @@ function getAllGigs() {
   return GigCollection.find() 
 }
 
-function addNewGig(newGig) {
+function addNewGig(bandId, newGig) {
+  newGig.bandId = bandId
+  // console.log(newGig)
   return GigCollection.create(newGig)
 }
 
@@ -52,7 +55,12 @@ function getGig(gigId) {
   return GigCollection.findById(gigId)
 }
 
+function getGigsByBandId(bandId) {
+  return GigCollection.find({bandId: bandId})
+}
+
 function updateGig(gigId, updatedGig) {
+  updateGig.bandId = bandId
   return GigCollection.findByIdAndUpdate(gigId, updatedGig)
 }
 
@@ -70,6 +78,7 @@ module.exports = {
   getGig,
   addNewGig,
   updateGig,
-  deleteGig
+  deleteGig,
+  getGigsByBandId
 }
 

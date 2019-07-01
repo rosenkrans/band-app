@@ -1,6 +1,6 @@
-<a href="/gigs">Back to Gigs Page</a>
+{{!-- <a href="/gigs">Back to Gigs Page</a> --}}
 
-<form method="POST" action="/gigs">
+<form method="POST" action="/bands/{{bandId}}/gigs">
 
   <div class="form-group">
     <label for="gigName" class="gigName">Gig Name</label>
@@ -53,6 +53,8 @@
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
+
+
 
 </form>
 

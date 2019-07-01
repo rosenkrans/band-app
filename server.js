@@ -61,9 +61,10 @@ app.set('view engine', 'hbs')
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/gigs', gigRouter)
-app.use('/members', memberRouter)
 app.use('/bands', bandRouter)
+app.use('/bands/:bandId/gigs', gigRouter)
+app.use('/bands/:bandId/members', memberRouter)
+
 
 /* Step 5
  *

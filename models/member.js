@@ -7,8 +7,9 @@ const mongoose = require('./connection.js')
  *
  */
 const MemberSchema = new mongoose.Schema({
-  id: {
-    type: Number
+  bandId: {
+    type: mongoose.Types.ObjectId,
+    required: true
   },
   memberName: {
     type: String,

@@ -7,9 +7,6 @@ const mongoose = require('./connection.js')
  *
  */
 const BandSchema = new mongoose.Schema({
-  id: {
-    type: Number
-  },
   bandName: {
     type: String,
     required: true

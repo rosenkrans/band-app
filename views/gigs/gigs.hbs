@@ -1,9 +1,9 @@
-<a href="/band">Back to Main Page</a>
+<a href="/bands">Back to Main Bands Page</a>
 <h1>Seed and Feed Marching Abominable</h1>
 
 <h2>Gig List</h2>
-{{!-- <p>Request the band!</p> --}}
-<a href="/gigs/create" class="btn btn-primary">Add Gig</a>
+
+<a href="/bands/{{bandId}}/gigs/create" class="btn btn-primary">Add Gig</a>
    
 <table class="table">
   <thead>
@@ -20,7 +20,7 @@
     {{#each gigs}}
 
     <tr>      
-        <td><a href="/gigs/{{_id}}">{{gigName}}</a></td>
+        <td><a href="/bands/{{bandId}}/gigs/{{_id}}">{{gigName}}</a></td>
         <td><p>{{dateOfGig}}</p></td>
         <td><p>{{typeOfPerformance}}</p></td>
         <td><p>{{gigDescription}}</p></td>
