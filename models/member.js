@@ -36,7 +36,8 @@ function getAllMembers() {
   return MemberCollection.find() 
 }
 
-function addNewMember(newMember) {
+function addNewMember(bandId, newMember) {
+  newMember.bandId = bandId
   return MemberCollection.create(newMember)
 }
 

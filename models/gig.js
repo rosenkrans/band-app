@@ -50,7 +50,7 @@ function addNewGig(bandId, newGig) {
   // console.log(newGig)
   return GigCollection.create(newGig)
 }
-
+ 
 function getGig(gigId) {
   return GigCollection.findById(gigId)
 }
