@@ -71,7 +71,9 @@ memberRouter.get('/:memberId', (req, res) => {
 memberRouter.get('/:memberId/edit', (req, res) => {
   memberApi.getMember(req.params.memberId)
     .then((member) => {
-      res.render('members/editMemberForm', {member})
+      res.render('members/editMemberForm', {
+        bandId: req.params.bandId,
+        member: member})
     })
     .catch((err) => {
       res.send(err)
