@@ -10,18 +10,11 @@
 <p>{{band._id}}</p>
     
 
-{{!-- <h3>Gigs</h3>
 
-<ul>
-    {{#each gig}}
-        <li>{{gigName}}</li>
-    {{/each}}
 
-</ul> --}}
-
-{{!-- <a href="/gigs/create" class="btn btn-primary">Add Gig</a> --}}
 <a href="/bands/{{band._id}}/gigs" class="btn btn-primary">Band Gigs</a>
 
+<a href="/bands/{{band.id}}/members" class="btn btn-primary">Members List</a>
 
 <form action="/bands/{{band._id}}?_method=DELETE" method="post">
     <button type="submit" class="btn btn-primary">Delete Band</button>
@@ -30,6 +23,14 @@
 
 
 
+{{!-- <h3>Gigs</h3>
+
+<ul>
+    {{#each gig}}
+        <li>{{gigName}}</li>
+    {{/each}}
+
+</ul> --}}
 
 
 
