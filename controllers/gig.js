@@ -16,7 +16,7 @@ const express = require('express')
  * 
  */
 const gigApi = require('../models/gig.js')
- 
+const bandApi = require('../models/band.js')
 /* Step 3 
  * 
  * Create a new router.
@@ -34,15 +34,32 @@ const gigRouter = express.Router({mergeParams: true})
 
 /* Step 5
  */ 
+
 gigRouter.get('/', (req, res) => {
-  gigApi.getGigsByBandId(req.params.bandId)
-    .then((gigs) => {
-      res.render('gigs/gigs', {bandId: req.params.bandId, gigs: gigs}) 
+  bandApi.getBand(req.params.bandId)
+    .then((band) => {
+      gigApi.getGigsByBandId(req.params.bandId)
+        .then((gigs) => {
+          res.render('gigs/gigs', {bandId: req.params.bandId, gigs: gigs, band: band}) 
+        })
     })
     .catch((err) => {
       res.send(err)
     })
 })
+
+
+// gigRouter.get('/', (req, res) => {
+//   gigApi.getGigsByBandId(req.params.bandId)
+//     .then((gigs) => {
+//       res.render('gigs/gigs', {bandId: req.params.bandId, gigs: gigs}) 
+//     })
+//     .catch((err) => {
+//       res.send(err)
+//     })
+// })
+
+
 
 gigRouter.get('/create', (req, res) => {
   res.render('gigs/createGigForm', {bandId: req.params.bandId}) 
