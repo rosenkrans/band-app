@@ -49,9 +49,9 @@ memberRouter.get('/create', (req, res) => {
 })
 
 memberRouter.post('/', (req, res) => {
-  memberApi.addNewMember(req.body)
+  memberApi.addNewMember(req.params.bandId, req.body)
     .then((newMember) => {
-      res.redirect('/members')
+      res.redirect(`/bands/${req.params.bandId}/members`)
     })
     .catch((err) => {
       res.send(err)
