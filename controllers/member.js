@@ -85,7 +85,7 @@ memberRouter.get('/:memberId/edit', (req, res) => {
 memberRouter.put('/:memberId', (req, res) => {
   memberApi.updateMember(req.params.memberId, req.body)
     .then(() => {
-      res.redirect('/members') 
+      res.redirect(`/bands/${req.params.bandId}/members`) 
     })
     .catch((err) => {
       res.send(err)
@@ -95,7 +95,7 @@ memberRouter.put('/:memberId', (req, res) => {
 memberRouter.delete('/:memberId', (req, res) => {
   memberApi.deleteMember(req.params.memberId)
     .then(() => {
-      res.redirect(`/bands/${req.params.bandId}, members`)
+      res.redirect(`/bands/${req.params.bandId}/members`)
     })
     .catch((err) => {
       res.send(err) 
