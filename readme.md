@@ -17,3 +17,16 @@ Band members will have the ability to view, add, update, and delete bands, gigs,
 1. Bootstrap
 1. Express
 1. MongoDB
+
+## Features
+
+
+## ERD:
+![ERD](Images/Project2ERD.jpg)
+
+
+
+
+
+
+
