@@ -22,7 +22,7 @@ Band members will have the ability to view, add, update, and delete bands, gigs,
 
 
 ## ERD:
-![ERD](Images/Project2ERD.jpg)
+Images/Project2ERD.jpg
 
 
 
