@@ -26,6 +26,9 @@ const GigSchema = new mongoose.Schema({
   typeOfPerformance: {
     type: String,
     required: true 
+  },
+  imgLink: {
+    type: String,
   }
 })
 

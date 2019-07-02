@@ -1,12 +1,12 @@
-<a href="/members">Back to Members Page</a>
+<a href="/bands/{{bandId}}/members">Back to Members Page</a>
 <h1>{{band.bandName}}</h1>
 
 <a href="/bands/{{bandId}}/members/{{member._id}}/edit">Edit Member</a>
 
-<h2>Member Name</h2>
+<h4>Member Name</h4>
 <p>{{member.memberName}}</p>
 
-<h3>Member Email</h3>
+<h4>Member Email</h4>
 <p>{{member.memberEmail}}</p>
     
 <form action="/bands/{{bandId}}/members/{{member._id}}?_method=DELETE" method="post">

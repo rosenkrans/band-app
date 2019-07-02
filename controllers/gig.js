@@ -92,7 +92,7 @@ gigRouter.put('/:gigId', (req, res) => {
   // console.log('im putting')
   gigApi.updateGig(req.params.gigId, req.body)
     .then(() => {
-      res.redirect(`/bands/${req.params.bandId}/gigs`) 
+      res.redirect(`/bands/${req.params.bandId}/gigs/${req.params.gigId}`) 
     })
     .catch((err) => {
       res.send(err)

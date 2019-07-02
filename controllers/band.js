@@ -83,7 +83,7 @@ bandRouter.get('/:bandId/edit', (req, res) => {
 bandRouter.put('/:bandId', (req, res) => {
   bandApi.updateBand(req.params.bandId, req.body)
     .then(() => {
-      res.redirect('/bands') 
+      res.redirect(`/bands/${req.params.bandId}`) 
     })
     .catch((err) => {
       res.send(err)
