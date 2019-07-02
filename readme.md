@@ -34,7 +34,12 @@ Band members will have the ability to view, add, update, and delete bands, gigs,
 ## Wireframe:
 ![erd](images/project2wireframe.jpg)
 
+## Cited Code:
+* Bootstrap - https://getbootstrap.com/ 
 
+## Future Release Features:
+*
+*
 
 
 
