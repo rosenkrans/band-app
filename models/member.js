@@ -66,7 +66,8 @@ module.exports = {
   getMember,
   addNewMember,
   updateMember,
-  deleteMember
+  deleteMember,
+  getMembersByBandId
 }
 
 
