@@ -10,6 +10,10 @@ const BandSchema = new mongoose.Schema({
   bandName: {
     type: String,
     required: true
+  },
+  aboutBand: {
+    type: String,
+    required: true
   }
 })
 
