@@ -18,7 +18,10 @@ const MemberSchema = new mongoose.Schema({
   memberEmail: {
     type: String,
     required: true
-  }
+  },
+  // bandName: {
+  //   type: band.bandId,
+  // }
 })
 
 /* Step 3

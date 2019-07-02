@@ -3,11 +3,15 @@
 
 <a href="/bands/{{band._id}}/edit">Edit Band</a>
 
+<div>
+    <img src="{{band.imgLink}}" alt="Image of {{band.bandName}}" class="band-image"/>
+</div>
+
 <h4>About the Band</h4>
 <p>{{band.aboutBand}}</p>
     
 
-<a href="/bands/{{band._id}}/gigs" class="btn btn-primary">Band Gigs</a>
+<a href="/bands/{{band._id}}/gigs" class="btn btn-primary">Gig List</a>
 
 <a href="/bands/{{band.id}}/members" class="btn btn-primary">Members List</a>
 

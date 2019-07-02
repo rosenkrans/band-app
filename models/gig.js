@@ -13,22 +13,22 @@ const GigSchema = new mongoose.Schema({
   },
   gigName: {
     type: String,
-    // required: true
+    required: true
   },
   gigDescription: {
     type: String,
-    // required: true 
+    required: true 
   },
   dateOfGig: {
     type: Date,
-    // required: true
+    required: true
   },
   typeOfPerformance: {
     type: String,
-    // required: true 
+    required: true 
   }
-  
 })
+
 
 /* Step 3
  *

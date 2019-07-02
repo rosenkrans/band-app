@@ -11,11 +11,20 @@ const BandSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  // bandName: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'Band'
+  // },
   aboutBand: {
     type: String,
     required: true
+  },
+  imgLink: {
+    type: String,
   }
 })
+
+// const Band = mongoose.model('Band', BandSchema, 'bandName');
 
 /* Step 3
  *
