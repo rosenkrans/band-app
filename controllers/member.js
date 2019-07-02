@@ -45,7 +45,7 @@ memberRouter.get('/', (req, res) => {
 })
 
 memberRouter.get('/create', (req, res) => {
-  res.render('members/createMemberForm') 
+  res.render('members/createMemberForm', {bandId: req.params.bandId}) 
 })
 
 memberRouter.post('/', (req, res) => {
