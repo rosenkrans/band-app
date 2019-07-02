@@ -10,15 +10,16 @@ Band members will have the ability to view, add, update, and delete bands, gigs,
 
 # Coding languages and libraries
 
-1. HTML
-1. CSS
-1. JavaScript
-1. Node.js
-1. Bootstrap
-1. Express
-1. MongoDB
+* HTML
+* CSS
+* JavaScript
+* Node.js
+* Bootstrap
+* Express
+* MongoDB
 
 ## Features
+
 * Add, view, edit, and delete band
 * View list of bands
 * Add, view, edit, and delete gig
@@ -26,8 +27,8 @@ Band members will have the ability to view, add, update, and delete bands, gigs,
 * Add, view, edit, and delete member
 * View list of members
 
-
 ## ERD:
+
 ![erd](images/Project2ERD.jpg)
 
 
