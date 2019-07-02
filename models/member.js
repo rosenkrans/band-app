@@ -44,6 +44,10 @@ function getMember(memberId) {
   return MemberCollection.findById(memberId)
 }
 
+function getMembersByBandId(bandId) {
+  return MemberCollection.find({bandId: bandId})
+}
+
 function updateMember(memberId, updatedMember) {
   return MemberCollection.findByIdAndUpdate(memberId, updatedMember)
 }
