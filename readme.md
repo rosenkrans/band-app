@@ -19,6 +19,12 @@ Band members will have the ability to view, add, update, and delete bands, gigs,
 1. MongoDB
 
 ## Features
+* Add, view, edit, and delete band
+* View list of bands
+* Add, view, edit, and delete gig
+* View list of gigs
+* Add, view, edit, and delete member
+* View list of members
 
 
 ## ERD:
