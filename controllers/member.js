@@ -35,9 +35,9 @@ const memberRouter = express.Router({mergeParams: true})
 /* Step 5
  */ 
 memberRouter.get('/', (req, res) => {
-  memberApi.getAllMembers()
+  memberApi.getMembersByBandId(req.params.bandId)
     .then((members) => {
-      res.render('members/members', {members}) 
+      res.render('members/members', {bandId: req.params.bandId, members: members}) 
     })
     .catch((err) => {
       res.send(err)

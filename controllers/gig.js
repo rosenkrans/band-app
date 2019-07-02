@@ -48,7 +48,7 @@ gigRouter.get('/create', (req, res) => {
   res.render('gigs/createGigForm', {bandId: req.params.bandId}) 
 })
 
-// edited 
+
 gigRouter.post('/', (req, res) => {
   // console.log(req.params.bandId, req.body)  
   gigApi.addNewGig(req.params.bandId, req.body)
@@ -59,16 +59,6 @@ gigRouter.post('/', (req, res) => {
       res.send(err)
     })
 })
-
-// gigRouter.post('/', (req, res) => {
-//   gigApi.addNewGig(req.body)
-//     .then((newGig) => {
-//       res.redirect('/gigs')
-//     })
-//     .catch((err) => {
-//       res.send(err)
-//     })
-// })
 
 gigRouter.get('/:gigId', (req, res) => {
   gigApi.getGig(req.params.gigId)
