@@ -2,7 +2,9 @@ body {
     background-color: #FFD429;
 }
 
-
+.btn-primary {
+    background-color: red;
+}
 
 
 
