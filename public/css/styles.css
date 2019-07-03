@@ -2,14 +2,22 @@ body {
     background-color: #FFD429;
 }
 
+.add-gig {
+    float: right;
+    margin-right: 200px;
+}
+
 .band-name {
     color: red;
     font-family: serif;
+    padding-left: 50px;
+    margin-top: 20px;
 }
 
 .text {
     color: black;
     font-family: serif;
+    padding-left: 50px;
 }
 
 .btn-primary {
@@ -21,10 +29,35 @@ body {
     width: auto;
 }
 
+.col-gig-name {
+    width: 200px;
+}
+
+.col-gig-date {
+    width: 300px;
+}
+
 .gig-image {
     height: 250px;
     width: auto;
+    float: right;
+    padding-right: 50px;
 }
 
+.desc {
+    display: block;
+    width: 600px;
+}
 
+.edit {
+    float: left;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.delete {
+    float: right;
+    margin-right: 50px;
+    margin-top: 100px;
+}
 

@@ -1,7 +1,6 @@
 <a href="/bands/{{bandId}}/gigs">Back to Gigs Page</a>
-<h1 class="band-name">{{band.bandName}}</h1>
 
-<a href="/bands/{{bandId}}/gigs/{{gig._id}}/edit">Edit Gig</a>
+<h1 class="band-name">{{band.bandName}}</h1>
 
 <h2 class="text">{{gig.gigName}}</h2>
 
@@ -16,12 +15,13 @@
     <p class="text">{{gig.dateOfGig}}</p>
 
     <h4 class="text">Description</h4>
-    <p class="text">{{gig.gigDescription}}</p>
+    <p class="text desc">{{gig.gigDescription}}</p>
 
-    
+<a href="/bands/{{bandId}}/gigs/{{gig._id}}/edit" class="btn btn-primary edit">Edit Gig</a>
+
 <form action="/bands/{{bandId}}/gigs/{{gig._id}}?_method=DELETE" method="post">
-    <button type="submit" class="btn btn-primary">Delete Gig</button>
+    <button type="submit" class="btn btn-primary delete">Delete Gig</button>
 </form>
 
-
+ 
 
