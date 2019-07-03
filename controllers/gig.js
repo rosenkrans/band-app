@@ -48,23 +48,9 @@ gigRouter.get('/', (req, res) => {
     })
 })
 
-
-// gigRouter.get('/', (req, res) => {
-//   gigApi.getGigsByBandId(req.params.bandId)
-//     .then((gigs) => {
-//       res.render('gigs/gigs', {bandId: req.params.bandId, gigs: gigs}) 
-//     })
-//     .catch((err) => {
-//       res.send(err)
-//     })
-// })
-
-
-
 gigRouter.get('/create', (req, res) => {
   res.render('gigs/createGigForm', {bandId: req.params.bandId}) 
 })
-
 
 gigRouter.post('/', (req, res) => {
   // console.log(req.params.bandId, req.body)  
@@ -77,10 +63,14 @@ gigRouter.post('/', (req, res) => {
     })
 })
 
+//add band name info in here
 gigRouter.get('/:gigId', (req, res) => {
-  gigApi.getGig(req.params.gigId)
-    .then((gig) => {
-      res.render('gigs/gig', {bandId: req.params.bandId, gig: gig})
+  bandApi.getBand(req.params.bandId)
+    .then((band) => {
+      gigApi.getGig(req.params.gigId)
+        .then((gig) => {
+          res.render('gigs/gig', {bandId: req.params.bandId, gig: gig, band: band})
+        })
     })
     .catch((err) => {
       res.send(err)
@@ -134,3 +124,16 @@ gigRouter.delete('/:gigId', (req, res) => {
 module.exports = {
   gigRouter
 }
+
+
+
+
+// gigRouter.get('/', (req, res) => {
+//   gigApi.getGigsByBandId(req.params.bandId)
+//     .then((gigs) => {
+//       res.render('gigs/gigs', {bandId: req.params.bandId, gigs: gigs}) 
+//     })
+//     .catch((err) => {
+//       res.send(err)
+//     })
+// })
