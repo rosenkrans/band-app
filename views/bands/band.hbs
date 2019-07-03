@@ -1,5 +1,9 @@
 <a href="/bands">Back to Band List</a>
-<h1>{{band.bandName}}</h1>
+
+<a href="/bands/{{band._id}}/gigs" class="btn btn-primary">Gig List</a>
+<a href="/bands/{{band.id}}/members" class="btn btn-primary">Member List</a>
+
+<h1 class="band-name">{{band.bandName}}</h1>
 
 <a href="/bands/{{band._id}}/edit">Edit Band</a>
 
@@ -7,13 +11,11 @@
     <img src="{{band.imgLink}}" alt="Image of {{band.bandName}}" class="band-image"/>
 </div>
 
-<h4>About the Band</h4>
-<p>{{band.aboutBand}}</p>
+<h4 class="text">About the Band</h4>
+<p class="text">{{band.aboutBand}}</p>
     
 
-<a href="/bands/{{band._id}}/gigs" class="btn btn-primary">Gig List</a>
 
-<a href="/bands/{{band.id}}/members" class="btn btn-primary">Members List</a>
 
 <form action="/bands/{{band._id}}?_method=DELETE" method="post">
     <button type="submit" class="btn btn-primary">Delete Band</button>

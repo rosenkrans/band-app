@@ -1,22 +1,22 @@
 <a href="/bands/{{bandId}}/gigs">Back to Gigs Page</a>
-<h1>{{band.bandName}}</h1>
+<h1 class="band-name">{{band.bandName}}</h1>
 
 <a href="/bands/{{bandId}}/gigs/{{gig._id}}/edit">Edit Gig</a>
 
-<h2>{{gig.gigName}}</h2>
+<h2 class="text">{{gig.gigName}}</h2>
 
     <div>
         <img src="{{gig.imgLink}}" alt="Image of {{gig.gigName}}" class="gig-image"/>
     </div>
 
-    <h4>Type of Performance</h4>
-    <p>{{gig.typeOfPerformance}}</p>
+    <h4 class="text">Type of Performance</h4>
+    <p class="text">{{gig.typeOfPerformance}}</p>
 
-    <h4>Event Date</h4>
-    <p>{{gig.dateOfGig}}</p>
+    <h4 class="text">Event Date</h4>
+    <p class="text">{{gig.dateOfGig}}</p>
 
-    <h4>Description</h4>
-    <p>{{gig.gigDescription}}</p>
+    <h4 class="text">Description</h4>
+    <p class="text">{{gig.gigDescription}}</p>
 
     
 <form action="/bands/{{bandId}}/gigs/{{gig._id}}?_method=DELETE" method="post">

@@ -1,13 +1,13 @@
 <a href="/bands/{{bandId}}/members">Back to Members Page</a>
-<h1>{{band.bandName}}</h1>
+<h1 class="band-name">{{band.bandName}}</h1>
 
 <a href="/bands/{{bandId}}/members/{{member._id}}/edit">Edit Member</a>
 
-<h4>Member Name</h4>
-<p>{{member.memberName}}</p>
+<h4 class="text">Member Name</h4>
+<p class="text">{{member.memberName}}</p>
 
-<h4>Member Email</h4>
-<p>{{member.memberEmail}}</p>
+<h4 class="text">Member Email</h4>
+<p class="text">{{member.memberEmail}}</p>
     
 <form action="/bands/{{bandId}}/members/{{member._id}}?_method=DELETE" method="post">
     <button type="submit" class="btn btn-primary">Delete Member</button>
