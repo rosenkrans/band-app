@@ -19,6 +19,10 @@ const MemberSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  memberInstrument: {
+    type: String,
+    required: true
+  },
   imgLink: {
     type: String,
   }
