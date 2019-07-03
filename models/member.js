@@ -22,9 +22,6 @@ const MemberSchema = new mongoose.Schema({
   imgLink: {
     type: String,
   }
-  // bandName: {
-  //   type: band.bandId,
-  // }
 })
 
 /* Step 3

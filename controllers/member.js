@@ -16,7 +16,7 @@ const express = require('express')
  * 
  */
 const memberApi = require('../models/member.js')
- 
+const bandApi = require('../models/band.js')
 /* Step 3 
  * 
  * Create a new router.
@@ -35,9 +35,12 @@ const memberRouter = express.Router({mergeParams: true})
 /* Step 5
  */ 
 memberRouter.get('/', (req, res) => {
-  memberApi.getMembersByBandId(req.params.bandId)
-    .then((members) => {
-      res.render('members/members', {bandId: req.params.bandId, members: members}) 
+  bandApi.getBand(req.params.bandId)
+    .then((band) => {
+      memberApi.getMembersByBandId(req.params.bandId)
+        .then((members) => {
+          res.render('members/members', {bandId: req.params.bandId, members: members, band: band}) 
+        })
     })
     .catch((err) => {
       res.send(err)
@@ -59,11 +62,15 @@ memberRouter.post('/', (req, res) => {
 })
 
 memberRouter.get('/:memberId', (req, res) => {
-  memberApi.getMember(req.params.memberId)
-    .then((member) => {
-      res.render('members/member', {
-        bandId: req.params.bandId,
-        member: member})
+  bandApi.getBand(req.params.bandId)
+    .then((band) => {
+      memberApi.getMember(req.params.memberId)
+        .then((member) => {
+          res.render('members/member', {
+            bandId: req.params.bandId,
+            member: member,
+            band: band})
+        })
     })
     .catch((err) => {
       res.send(err)

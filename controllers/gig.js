@@ -34,13 +34,15 @@ const gigRouter = express.Router({mergeParams: true})
 
 /* Step 5
  */ 
-
 gigRouter.get('/', (req, res) => {
   bandApi.getBand(req.params.bandId)
     .then((band) => {
       gigApi.getGigsByBandId(req.params.bandId)
         .then((gigs) => {
-          res.render('gigs/gigs', {bandId: req.params.bandId, gigs: gigs, band: band}) 
+          res.render('gigs/gigs', {
+            bandId: req.params.bandId, 
+            gigs: gigs, 
+            band: band}) 
         })
     })
     .catch((err) => {
@@ -63,13 +65,15 @@ gigRouter.post('/', (req, res) => {
     })
 })
 
-//add band name info in here
 gigRouter.get('/:gigId', (req, res) => {
   bandApi.getBand(req.params.bandId)
     .then((band) => {
       gigApi.getGig(req.params.gigId)
         .then((gig) => {
-          res.render('gigs/gig', {bandId: req.params.bandId, gig: gig, band: band})
+          res.render('gigs/gig', {
+            bandId: req.params.bandId, 
+            gig: gig, 
+            band: band})
         })
     })
     .catch((err) => {
