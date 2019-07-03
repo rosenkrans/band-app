@@ -1,11 +1,9 @@
 <a href="/bands">Back to Band List</a>
 
-<a href="/bands/{{band._id}}/gigs" class="btn btn-primary">Gig List</a>
-<a href="/bands/{{band.id}}/members" class="btn btn-primary">Member List</a>
+<a href="/bands/{{band._id}}/gigs" class="btn btn-primary gig-list-btn">Gig List</a>
+<a href="/bands/{{band.id}}/members" class="btn btn-primary member-list-btn">Member List</a>
 
 <h1 class="band-name">{{band.bandName}}</h1>
-
-<a href="/bands/{{band._id}}/edit">Edit Band</a>
 
 <div>
     <img src="{{band.imgLink}}" alt="Image of {{band.bandName}}" class="band-image"/>
@@ -14,12 +12,14 @@
 <h4 class="text">About the Band</h4>
 <p class="text">{{band.aboutBand}}</p>
     
-
-
+<a href="/bands/{{band._id}}/edit" class="btn btn-primary edit-band-btn">Edit Band</a>
 
 <form action="/bands/{{band._id}}?_method=DELETE" method="post">
-    <button type="submit" class="btn btn-primary">Delete Band</button>
+    <input type="hidden" name="_method" value="DELETE"> 
+    <input type="hidden" name="_token" value="the_token">
+    <button type="submit" class="btn btn-primary delete" onclick="if (!confirm('Are you sure?')) { return false }"><span>Delete</span></button>
 </form>
+
 
 
 

@@ -2,9 +2,30 @@ body {
     background-color: #FFD429;
 }
 
-.add-gig {
+.add-band-btn {
+    margin-top: 15px;
+}
+
+.add-gig-btn {
     float: right;
     margin-right: 200px;
+    width: 115px;
+}
+
+.add-member-btn {
+    float: right;
+    margin-right: 200px;
+}
+
+.member-list-btn {
+    float: right;
+    margin-right: 300px;
+    width: 115px;
+}
+
+.gig-list-btn {
+    margin-left: 600px;
+    width: 115px;
 }
 
 .band-name {
@@ -27,10 +48,15 @@ body {
 .band-image {
     height: 300px;
     width: auto;
+    margin-left: 50px;
 }
 
 .col-gig-name {
     width: 200px;
+}
+
+.col-member-name {
+    width: 300px;
 }
 
 .col-gig-date {
@@ -49,10 +75,11 @@ body {
     width: 600px;
 }
 
-.edit {
+.edit-member-btn {
     float: left;
     margin-left: 50px;
     margin-top: 100px;
+    width: 115px;
 }
 
 .delete {
@@ -61,3 +88,41 @@ body {
     margin-top: 100px;
 }
 
+.create-band-form {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.edit-band-form {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.create-gig-form {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.create-member-form {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.edit-gig-form {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.edit-gig-btn {
+    float: left;
+    margin-left: 50px;
+    margin-top: 100px;
+    width: 115px;
+}
+
+.edit-band-btn {
+    float: left;
+    margin-left: 50px;
+    margin-top: 100px;
+    width: 115px;
+}
