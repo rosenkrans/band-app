@@ -17,7 +17,8 @@
 <form action="/bands/{{band._id}}?_method=DELETE" method="post">
     <input type="hidden" name="_method" value="DELETE"> 
     <input type="hidden" name="_token" value="the_token">
-    <button type="submit" class="btn btn-primary delete" onclick="if (!confirm('Are you sure?')) { return false }"><span>Delete</span></button>
+    <button type="submit" class="btn btn-primary delete" 
+    onclick="if(!confirm('Are you sure?')) { return false }"><span>Delete Band</span></button>
 </form>
 
 

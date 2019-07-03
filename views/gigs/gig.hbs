@@ -20,7 +20,10 @@
 <a href="/bands/{{bandId}}/gigs/{{gig._id}}/edit" class="btn btn-primary edit-gig-btn">Edit Gig</a>
 
 <form action="/bands/{{bandId}}/gigs/{{gig._id}}?_method=DELETE" method="post">
-    <button type="submit" class="btn btn-primary delete">Delete Gig</button>
+    <input type="hidden" name="_method" value="DELETE"> 
+    <input type="hidden" name="_token" value="the_token">
+    <button type="submit" class="btn btn-primary delete" 
+    onclick="if(!confirm('Are you sure?')) { return false }"><span>Delete Gig</span></button>
 </form>
 
  

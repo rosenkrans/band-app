@@ -13,6 +13,9 @@
 <a href="/bands/{{bandId}}/members/{{member._id}}/edit" class="btn btn-primary edit-member-btn">Edit Member</a>
 
 <form action="/bands/{{bandId}}/members/{{member._id}}?_method=DELETE" method="post">
-    <button type="submit" class="btn btn-primary delete">Delete Member</button>
+    <input type="hidden" name="_method" value="DELETE"> 
+    <input type="hidden" name="_token" value="the_token">
+    <button type="submit" class="btn btn-primary delete" 
+    onclick="if(!confirm('Are you sure?')) { return false }"><span>Delete Member</span></button>
 </form>
 
