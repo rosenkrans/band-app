@@ -12,6 +12,10 @@ body {
     width: 115px;
 }
 
+.photo-cred {
+    margin-top: 30px;
+}
+
 .add-member-btn {
     float: right;
     margin-right: 200px;

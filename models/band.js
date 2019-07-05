@@ -19,6 +19,10 @@ const BandSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  photoCredit: {
+    type: String,
+    required: true
+  },
   imgLink: {
     type: String,
   }
