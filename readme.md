@@ -29,10 +29,10 @@ Band members will have the ability to view, add, update, and delete bands, gigs,
 
 ## ERD:
 
-![erd](images/project2erd.jpg)
+![erd](/images/project2erd.jpg)
 
 ## Wireframe:
-![wireframe](images/project2wireframe.jpg)
+![wireframe](/images/project2wireframe.jpg)
 
 ## Cited Code:
 * Bootstrap - https://getbootstrap.com/ 
