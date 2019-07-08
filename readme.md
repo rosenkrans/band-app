@@ -1,6 +1,6 @@
 # Band App
 My Project 2 is an application modeled after a marching band of which I am a member - Seed & Feed Marching Abominable.
-Band members will have the ability to view, add, update, and delete bands, gigs, and members text and images.
+Band members will have the ability to view, add, update, and delete bands, gigs, and members text, images, and video links.
 
 ## Links
 
@@ -20,12 +20,13 @@ Band members will have the ability to view, add, update, and delete bands, gigs,
 
 ## Features
 
-* Add, view, edit, and delete band
+* Add, view, edit, and delete a band
 * View list of bands
-* Add, view, edit, and delete gig
+* Add, view, edit, and delete a gig
 * View list of gigs
-* Add, view, edit, and delete member
+* Add, view, edit, and delete a member
 * View list of members
+* Add and remove images and video links
 
 ## ERD:
 
