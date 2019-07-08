@@ -31,6 +31,9 @@ const GigSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  vidLink: {
+    type: String,
+  },
   imgLink: {
     type: String,
   }
