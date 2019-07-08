@@ -4,7 +4,6 @@ Band members will have the ability to view, add, update, and delete bands, gigs,
 
 ## Links
 
-1. Github - https://github.com/rosenkrans/band-app 
 1. Trello - https://trello.com/b/sQ6Or0KD/band-app 
 1. Heroku - https://band-app-seednfeed.herokuapp.com/bands 
 
@@ -39,7 +38,7 @@ Band members will have the ability to view, add, update, and delete bands, gigs,
 
 ## Future Release Features:
 * Change to a single band with different models
-* Add video clips of the band performances
+* Make this mobile friendly
 
 
 
