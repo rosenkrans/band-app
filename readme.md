@@ -15,6 +15,7 @@ Band members will have the ability to view, add, update, and delete bands, gigs,
 * Node.js
 * Bootstrap
 * Express
+* Mongoose
 * MongoDB
 
 ## Features
