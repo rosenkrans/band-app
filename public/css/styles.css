@@ -6,44 +6,6 @@ body {
     text-align: center;
 }
 
-.add-band-btn {
-    margin-top: 15px;
-    height: 100px;
-}
-
-.add-gig-btn {
-    float: right;
-    margin-right: 200px;
-    width: 115px;
-}
-
-.photo-cred {
-    margin-top: 30px;
-}
-
-.add-member-btn {
-    float: right;
-    margin-right: 200px;
-}
-
-.member-list-btn {
-    float: right;
-    margin-right: 300px;
-    width: 115px;
-}
-
-.gig-list-btn {
-    margin-left: 600px;
-    width: 115px;
-}
-
-.band-name {
-    color: red;
-    font-family: serif;
-    padding-left: 50px;
-    margin-top: 20px;
-}
-
 .text {
     color: black;
     font-family: serif;
@@ -54,14 +16,98 @@ body {
     background-color: red;
 }
 
+.add-band-btn {
+    margin-top: 15px;
+    height: 100px;
+}
+
+.band-name {
+    color: red;
+    font-family: serif;
+    padding-left: 50px;
+    margin-top: 20px;
+}
+
+.create-band-form {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
 .band-image {
     height: 300px;
     width: auto;
     margin-left: 50px;
 }
 
+.edit-band-form {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.edit-band-btn {
+    float: left;
+    margin-left: 50px;
+    margin-top: 100px;
+    width: 115px;
+}
+
+.gig-list-btn {
+    margin-left: 600px;
+    width: 115px;
+}
+
 .col-gig-name {
     width: 200px;
+}
+
+.col-gig-date {
+    width: 300px;
+}
+
+.add-gig-btn {
+    float: right;
+    margin-right: 200px;
+    width: 115px;
+}
+
+.create-gig-form {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.gig-image {
+    height: 250px;
+    width: auto;
+    float: right;
+    padding-right: 50px;
+}
+
+.edit-gig-btn {
+    float: left;
+    margin-left: 50px;
+    margin-top: 100px;
+    width: 115px;
+}
+
+.edit-gig-form {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.member-list-btn {
+    float: right;
+    margin-right: 300px;
+    width: 115px;
+}
+
+.add-member-btn {
+    float: right;
+    margin-right: 200px;
+}
+
+.create-member-form {
+    margin-left: 50px;
+    margin-top: 50px;
 }
 
 .col-member-name {
@@ -76,20 +122,8 @@ body {
     width: 300px;
 }
 
-.col-gig-date {
-    width: 300px;
-}
-
-.gig-image {
-    height: 250px;
-    width: auto;
-    float: right;
-    padding-right: 50px;
-}
-
-.desc {
-    display: block;
-    width: 600px;
+.photo-cred {
+    margin-top: 30px;
 }
 
 .edit-member-btn {
@@ -99,47 +133,14 @@ body {
     width: 120px;
 }
 
+.desc {
+    display: block;
+    width: 600px;
+}
+
 .delete {
     float: right;
     margin-right: 50px;
     margin-top: 100px;
 }
 
-.create-band-form {
-    margin-left: 50px;
-    margin-top: 50px;
-}
-
-.edit-band-form {
-    margin-left: 50px;
-    margin-top: 50px;
-}
-
-.create-gig-form {
-    margin-left: 50px;
-    margin-top: 50px;
-}
-
-.create-member-form {
-    margin-left: 50px;
-    margin-top: 50px;
-}
-
-.edit-gig-form {
-    margin-left: 50px;
-    margin-top: 50px;
-}
-
-.edit-gig-btn {
-    float: left;
-    margin-left: 50px;
-    margin-top: 100px;
-    width: 115px;
-}
-
-.edit-band-btn {
-    float: left;
-    margin-left: 50px;
-    margin-top: 100px;
-    width: 115px;
-}
